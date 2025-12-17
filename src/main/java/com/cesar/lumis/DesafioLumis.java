@@ -5,7 +5,10 @@ import java.util.stream.Collectors;
 
 public class DesafioLumis {
 
-    public static long calcularFatorial(int numero) {
+    /**
+     * Fatorial
+     */
+    public long calcularFatorial(int numero) {
         if (numero < 0) {
             throw new IllegalArgumentException("Fatorial não é definido para números negativos.");
         }
@@ -17,9 +20,11 @@ public class DesafioLumis {
         return numero * calcularFatorial(numero - 1);
     }
 
+    /**
+     * Palíndromo
+     */
     public boolean verificarPalindromo(String palavra) {
-
-        if(palavra == null || palavra.isEmpty()) {
+        if (palavra == null || palavra.isEmpty()) {
             return false;
         }
 
@@ -29,6 +34,9 @@ public class DesafioLumis {
         return palavraLimpa.equals(palavraInvertida);
     }
 
+    /**
+     * Classe Modelo
+     */
     public static class Carro {
         private String modelo;
         private String cor;
@@ -42,13 +50,16 @@ public class DesafioLumis {
         public String getCor() { return cor; }
     }
 
+    /**
+     * 4) Filtrar Carros
+     */
     public List<Carro> filtrarCarrosPretos(List<Carro> carros) {
         if (carros == null) {
             return List.of();
         }
 
         return carros.stream()
-                .filter(carro -> carro.getModelo() != null && carro.getCor() != null && "preta".equalsIgnoreCase(carro.getCor()))
+                .filter(carro -> carro != null && carro.getCor() != null && "preta".equalsIgnoreCase(carro.getCor()))
                 .collect(Collectors.toList());
     }
 }
