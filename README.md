@@ -1,11 +1,21 @@
 # Desafio Técnico - Backend Java (Lumis)
 
-Este repositório contém a solução para o teste técnico de Desenvolvedor Backend.
+Este repositório contém a solução para o teste técnico para a vaga de Desenvolvedor Backend na Lumis.
 O projeto foi estruturado utilizando **Java 17**, **Maven** e **JUnit 5** para validação automatizada dos algoritmos.
 
 ## 🚀 Como Rodar os Testes
 
-Para verificar a solução das questões práticas (1, 2 e 4), execute os testes unitários via Maven ou pela sua IDE.
+Para garantir a integridade da solução, o projeto conta com testes unitários automatizados (JUnit 5).
+
+### Pré-requisitos
+* Java 17 (ou superior)
+* Maven
+
+### Executando via Terminal
+Na raiz do projeto, execute o comando abaixo para compilar e rodar todos os testes:
+
+```bash
+mvn test
 
 ## 📋 Respostas dos questionamentos apresentados
 
